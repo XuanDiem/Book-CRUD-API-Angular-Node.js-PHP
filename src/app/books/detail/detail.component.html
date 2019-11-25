@@ -1,0 +1,29 @@
+<hr>
+<div class="container">
+  <p class="page-title">BOOK DETAIL</p>
+  <button class="btn btn-success add-button" routerLink="/books">Back To Page List Book</button>
+  <hr>
+  <table class="table" border="3" bgcolor="aqua">
+    <div class="row ">
+      <div class="col-sx-6 col-sm-6 col-md-12 col-lg-12 dress-spread-background">
+        <div class="product">
+          <br>
+          <div class="product-content product-margin-padding">
+            <div>
+              <Span><h2>Id Book:</h2></Span><a class=""  routerLink="/detail/{{bookDetail.id}}">{{bookDetail.id}}</a>
+            </div>
+            <h5 class="title">
+              <Span><h3>Book Name:</h3></Span><b><a class="" routerLink="/detail/{{bookDetail.id}}">{{bookDetail.title}}</a></b>
+            </h5>
+            <div>
+              <Span><h3>Author Name:</h3></Span><a class=""  routerLink="/detail/{{bookDetail.id}}"><b>{{bookDetail.author}}</b></a>
+            </div>
+            <div>
+              <Span><h3>Description:</h3></Span><a class=""  routerLink="/detail/{{bookDetail.id}}">{{bookDetail.description}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </table>
+</div>

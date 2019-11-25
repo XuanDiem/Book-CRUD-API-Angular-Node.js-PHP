@@ -1,0 +1,25 @@
+<hr>
+<div class="container">
+  <p class="page-title">DELETE BOOK</p>
+  <button class="btn btn-success add-button" routerLink="/books">Back To Page List Book</button>
+  <hr>
+  <table class="table" border="3" bgcolor="aqua">
+    <div class="row product-detail">
+      <div class="col-sx-6 col-sm-6 col-md-12 col-lg-12 dress-spread-background">
+        <div class="form-content pt-0 mb-0">
+          <div class="row">
+            <span><h4>Do you want Delete this book <b>{{bookDelete.title}}</b> ?</h4></span>
+          </div>
+          <button (click)=delete(bookDelete) class="btn btn-danger mr-3">Yes</button>
+          <button routerLink="/books" class="btn btn-secondary">No</button>
+          <hr>
+          <span><h3>Author Name:</h3></span>
+          <p>{{bookDelete.author}}</p>
+          <span><h3>Description:</h3></span>
+          <p>{{bookDelete.description}}</p>
+        </div>
+      </div>
+    </div>
+  </table>
+</div>
+

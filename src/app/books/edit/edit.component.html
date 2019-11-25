@@ -1,0 +1,51 @@
+<hr>
+<div>
+  <div class="container margin-form-add-product">
+    <p class="page-title">EDIT BOOK</p>
+    <button class="btn btn-success add-button" routerLink="/books">Back To Page List Book</button>
+    <hr>
+    <div class="row">
+      <div class="col-lg-12">
+        <form [formGroup]="updateFormBook" (ngSubmit)="submit()">
+          <div class="form-group">
+            <label>Book Name:</label>
+            <input id="title" class="form-control"
+            formControlName="title" required value="{{book.title}}">
+            <div *ngIf="title.invalid && (title.dirty || title.touched)"
+                 class="alert alert-danger">
+              <div *ngIf="title.errors.required">
+                Tên sách không được để trống !
+              </div>
+              <div *ngIf="title.errors.minlength">
+                Tên sách không được dưới 4 ký tự !
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Author Name :</label>
+            <input id="author" class="form-control"
+                   formControlName="author" required value="{{book.author}}">
+            <div *ngIf="author.invalid && (author.dirty || author.touched)"
+                 class="alert alert-danger">
+              <div *ngIf="author.errors.required">
+                Tên tác giả không được để trống !
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Description:</label>
+            <input type="text" id="description" class="form-control"
+                   formControlName="description" required value="{{book.description}}">
+            <div *ngIf="description.invalid && (description.dirty || description.touched)"
+                 class="alert alert-danger">
+              <div *ngIf="description.errors.required">
+                Phần Mô tả không được để trống !
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="!updateFormBook.valid">Cập Nhập</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
